@@ -16,7 +16,7 @@ services:
         # USER_GID: 1000
 
     volumes:
-      - ..:/root/workspace:cached
+      - ..:/workspace:cached
     environment:
       - DATABASE_URI=postgresql://postgres:postgres@db/postgres
 

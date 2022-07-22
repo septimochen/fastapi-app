@@ -19,11 +19,11 @@ ENV PYTHONUNBUFFERED 1
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 #     && apt-get -y install --no-install-recommends <your-package-list-here>
 
-COPY . /root/workspace
+COPY . /workspace
 RUN pip3 install --upgrade pip
 
 #install poetry
 RUN pip3 install poetry
 #use system python instead of venv
 RUN poetry config virtualenvs.create false
-RUN cd /root/workspace && poetry install --no-dev
+RUN cd /workspace && poetry install --no-dev
